@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      window.addEventListener(
+        'error',
+        function (event) {
+          if (
+            event &&
+            typeof event.filename === 'string' &&
+            event.filename.indexOf('chrome-extension://') === 0
+          ) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+          }
+        },
+        true
+      );
+    </script>
+    <title>Muhammad Nadhif Al-Fatih — Informatics &amp; Creative VFX Portfolio</title>
+    <meta
+      name="description"
+      content="Technical blueprint and kinetic collage portfolio for Muhammad Nadhif Al-Fatih, Informatics Engineering student at Institut Teknologi PLN, VFX compositor, and IIIEX 2025 Gold Medalist."
+    />
+    <meta property="og:title" content="Muhammad Nadhif Al-Fatih — Informatics & Creative VFX Portfolio" />
+    <meta
+      property="og:description"
+      content="Technical blueprint and kinetic collage portfolio for Muhammad Nadhif Al-Fatih, Informatics Engineering student at Institut Teknologi PLN, VFX compositor, and IIIEX 2025 Gold Medalist."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-grid-blueprint text-ink font-sans antialiased overflow-x-hidden selection:bg-cobalt selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

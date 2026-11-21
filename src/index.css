@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blueprint: #F8F9FA;
+  --color-cobalt: #0057FF;
+  --color-cobalt-glow: #3B82F6;
+  --color-ink: #0F1115;
+  --color-panel-dark: #16181D;
+  --color-panel-border: #252932;
+  --color-pink-frame: #F4A8E8;
+
+  --font-display: "Anton", sans-serif;
+  --font-script: "Caveat", cursive;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --shadow-brutal: 6px 6px 0px 0px #0F1115;
+  --shadow-brutal-sm: 4px 4px 0px 0px #0F1115;
+  --shadow-brutal-blue: 6px 6px 0px 0px #0057FF;
+  --shadow-glow-cobalt: 0 0 25px -4px rgba(0, 87, 255, 0.45);
+}
+
+:root {
+  --active-accent: #0057FF;
+}
+
+.bg-grid-blueprint {
+  background-color: #F8F9FA;
+  background-image:
+    linear-gradient(to right, rgba(15, 17, 21, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 17, 21, 0.055) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-grid-blueprint-dense {
+  background-color: #F8F9FA;
+  background-image:
+    linear-gradient(to right, rgba(0, 87, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 87, 255, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-dark-grid {
+  background-color: #121418;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(0.5deg);
+  }
+}
+
+@keyframes float-reversed {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(7px) rotate(-0.5deg);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.animate-float-alt {
+  animation: float-reversed 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-alt {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}

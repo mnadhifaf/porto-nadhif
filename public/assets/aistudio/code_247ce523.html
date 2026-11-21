@@ -1,0 +1,995 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Muhammad Nadhif Al-Fatih — Informatics &amp; Creative VFX Portfolio</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Caveat:wght@600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blueprint: '#F8F9FA',
+            cobalt: '#0057FF',
+            'cobalt-glow': '#3B82F6',
+            ink: '#0F1115',
+            'panel-dark': '#16181D',
+            'panel-border': '#252932',
+            'pink-frame': '#F4A8E8',
+          },
+          fontFamily: {
+            display: ['Anton', 'sans-serif'],
+            script: ['Caveat', 'cursive'],
+            mono: ['JetBrains Mono', 'monospace'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            'brutal': '6px 6px 0px 0px #0F1115',
+            'brutal-blue': '6px 6px 0px 0px #0057FF',
+            'glow-cobalt': '0 0 25px -4px rgba(0, 87, 255, 0.45)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: StyleConfigurations -->
+<style data-purpose="technical-grid-canvas">
+    /* Architectural Blueprint Grid Pattern matching IMAGE_2 */
+    .bg-grid-blueprint {
+      background-color: #F8F9FA;
+      background-image: 
+        linear-gradient(to right, rgba(15, 17, 21, 0.055) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 17, 21, 0.055) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    
+    .bg-dark-grid {
+      background-color: #121418;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+<style data-purpose="floating-animations">
+    @keyframes float-gentle {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(0.5deg); }
+    }
+    @keyframes float-reversed {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(8px) rotate(-0.5deg); }
+    }
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.75; transform: scale(0.97); }
+    }
+    .animate-float {
+      animation: float-gentle 5s ease-in-out infinite;
+    }
+    .animate-float-alt {
+      animation: float-reversed 6s ease-in-out infinite;
+    }
+    .animate-pulse-glow {
+      animation: pulse-slow 3s ease-in-out infinite;
+    }
+    /* Dynamic active theme accent class used by JS */
+    .dynamic-theme-accent {
+      transition: all 0.35s ease-in-out;
+    }
+  </style>
+<!-- END: StyleConfigurations -->
+<script bis_use="true" type="text/javascript" charset="utf-8" nonce="" data-dynamic-id="935f27c1-11aa-4906-aed2-acc6d195e2ad" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js"></script></head>
+<body class="bg-grid-blueprint text-ink font-sans antialiased overflow-x-hidden selection:bg-cobalt selection:text-white relative" bis_status="ok" bis_frame_id="227" data-mode="connect">
+<!-- Coordinate Crosshairs & Blueprint Elements -->
+<div class="fixed top-6 left-6 pointer-events-none text-ink/30 font-mono text-[10px] hidden md:block z-40 select-none">
+    + X: 104.7565° E | Y: 2.9909° S [PALEMBANG_GRID]
+  </div>
+<div class="fixed bottom-6 right-6 pointer-events-none text-ink/30 font-mono text-[10px] hidden md:block z-40 select-none">
+    REF: IT-PLN_INFORMATICS // 2026_SPEC
+  </div>
+<!-- BEGIN: NavigationBar -->
+<header class="sticky top-0 z-50 bg-[#F8F9FA]/90 backdrop-blur-md border-b border-ink/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+<!-- Brand Identifier -->
+<div class="flex items-center space-x-3">
+<div class="w-3.5 h-3.5 bg-cobalt shadow-sm"></div>
+<div class="leading-none">
+<span class="block text-[11px] font-mono font-bold tracking-widest text-ink uppercase">INFORMATICS &amp; VFX</span>
+<span class="block text-[9px] font-mono text-ink/60 uppercase">CREATIVE DEVELOPER</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-6 text-xs font-mono uppercase tracking-wider text-ink/80">
+<a class="hover:text-cobalt transition-colors" href="#about">01 // About</a>
+<a class="hover:text-cobalt transition-colors" href="#neuro-dawn">02 // Neuro Dawn</a>
+<a class="hover:text-cobalt transition-colors" href="#skills">03 // Skills</a>
+<a class="hover:text-cobalt transition-colors" href="#experience">04 // Track</a>
+<a class="hover:text-cobalt transition-colors" href="#connect">05 // Connect</a>
+</nav>
+<!-- Location Badge & CTA -->
+<div class="flex items-center space-x-3">
+<div class="hidden sm:flex items-center space-x-2 text-[10px] font-mono bg-white border border-ink/15 px-2.5 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+<span class="text-ink/80">PALEMBANG • JAKARTA</span>
+<span class="text-ink/40">|</span>
+<span class="font-bold text-cobalt">IT-PLN '26 +</span>
+</div>
+<a class="text-xs font-mono bg-ink text-white px-3 py-1.5 rounded hover:bg-cobalt transition-colors flex items-center gap-1.5" href="#connect">
+<span>HIRE ME</span>
+<span class="text-[10px]">↗</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: NavigationBar -->
+<main>
+<!-- BEGIN: HeroStage -->
+<section class="relative pt-6 pb-20 overflow-hidden border-b border-ink/10" data-purpose="hero-floating-workspace">
+<!-- Decorative Backdrop Elements -->
+<div class="absolute top-10 left-12 text-6xl text-ink/5 select-none pointer-events-none font-mono">+</div>
+<div class="absolute top-48 right-16 text-6xl text-ink/5 select-none pointer-events-none font-mono">+</div>
+<div class="absolute top-1/2 left-4 text-xs font-mono text-ink/30 [writing-mode:vertical-lr] hidden lg:block select-none">
+        CANVAS_BOUNDS: [ 1920 x 1080 ] px • DPI: 300
+      </div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<!-- Top Status Sub-Header inside Hero -->
+<div class="flex justify-between items-center text-[10px] font-mono tracking-widest text-ink/60 mb-2">
+<div class="flex items-center space-x-2">
+<span class="inline-block w-2 h-2 bg-cobalt"></span>
+<span>PIXEL PERFECT &amp; ALGORITHMIC ARCHITECTURE</span>
+</div>
+<div class="hidden sm:flex items-center space-x-3">
+<span>UI / UX &amp; SOFTWARE</span>
+<span>•</span>
+<span>VFX COMPOSITING</span>
+<span class="text-cobalt font-bold">+</span>
+</div>
+</div>
+<!-- Huge Layered Headline Structure (Matching IMAGE_2 styling) -->
+<div class="relative text-center mt-2 mb-6">
+<!-- Script Accent Floating Above Title -->
+<div class="relative z-20 -mb-5 sm:-mb-8 md:-mb-12">
+<span class="font-script text-4xl sm:text-6xl md:text-8xl text-cobalt inline-block -rotate-[4deg] drop-shadow-sm select-none">
+              Informatics &amp;
+            </span>
+</div>
+<!-- Massive Bold Condensed Display Title -->
+<h1 class="font-display uppercase text-6xl sm:text-9xl md:text-[13rem] lg:text-[15.5rem] tracking-tight text-ink leading-[0.82] select-none">
+            CREATor</h1>
+<!-- Subtitle statement with dual color accents -->
+<p class="font-mono text-xs sm:text-sm tracking-wider uppercase text-ink/75 mt-3 max-w-xl mx-auto font-medium">
+            DESIGNING SOLUTIONS, <span class="text-cobalt font-bold">SHAPING DIGITAL VISUALS.</span>
+</p>
+</div>
+<!-- Central Interactive 3D Floating Software Collage Stage -->
+<div class="relative max-w-5xl mx-auto min-h-[640px] sm:min-h-[720px] md:min-h-[820px] flex items-center justify-center">
+<!-- 1. Background Tilted 3D Pink Secondary Window Frame (Like IMAGE_2 #F4A8E8 panel) -->
+<div class="absolute w-[280px] sm:w-[420px] md:w-[540px] h-[340px] sm:h-[480px] md:h-[580px] rounded-3xl bg-pink-frame border-[6px] border-white shadow-2xl rotate-6 translate-x-6 sm:translate-x-16 -translate-y-8 z-0 overflow-hidden hidden sm:block opacity-90 transition-transform duration-500 hover:rotate-3">
+<div class="h-8 bg-pink-400/50 flex items-center px-4 space-x-1.5 border-b border-pink-400">
+<span class="w-2.5 h-2.5 rounded-full bg-white/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-white/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-white/70"></span>
+<span class="ml-2 text-[10px] font-mono text-ink/70 font-bold">vfx_compositing_render.ae</span>
+</div>
+<div class="p-6 bg-[#181A20] h-full font-mono text-[11px] text-zinc-300 space-y-2">
+<div class="flex justify-between text-zinc-500 border-b border-zinc-800 pb-2">
+<span>TIMELINE // KEYFRAMES</span>
+<span class="text-pink-300">00:14:28:02</span>
+</div>
+<div class="space-y-1.5 pt-2 text-[10px]">
+<div class="text-blue-400">▶ [Layer 01] Track_Matte_NeuroDawn.mp4</div>
+<div class="text-emerald-400">▶ [Layer 02] 3D_Brain_Dopamine_Emitter</div>
+<div class="text-purple-400">▶ [Layer 03] Glow_OpticalFlares_4K</div>
+<div class="text-amber-400">▶ [Layer 04] Camera_Rig_Null_3D</div>
+</div>
+<div class="mt-8 p-3 rounded bg-black/40 border border-white/10 text-center">
+<span class="text-[9px] uppercase tracking-wider text-pink-300 block mb-1">Renderer: GPU Mercury Engine</span>
+<div class="w-full bg-zinc-800 rounded-full h-2 overflow-hidden">
+<div class="bg-pink-400 h-full w-[88%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Primary Focal Subject Silhouette Card Collage -->
+<div class="relative z-10 w-[270px] sm:w-[360px] md:w-[420px] rounded-3xl bg-zinc-950 border-4 border-ink shadow-2xl overflow-hidden group">
+<!-- Simulated Creator Studio Photo Portrait Container -->
+<div class="relative h-[380px] sm:h-[460px] md:h-[500px] w-full overflow-hidden bg-gradient-to-b from-zinc-800 via-zinc-900 to-black flex flex-col justify-end p-6">
+<!-- Grid Overlay in portrait frame -->
+<div class="absolute inset-0 bg-dark-grid opacity-30"></div>
+<!-- Subtle Abstract Stylized Silhouette Avatar for Muhammad Nadhif Al-Fatih -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-gradient-to-tr from-cobalt/40 via-purple-600/30 to-pink-500/20 blur-2xl"></div>
+<!-- Stylized Vector Silhouette Icon representing developer with headphones / glasses -->
+<svg class="w-64 h-80 sm:w-80 sm:h-96 text-zinc-300/90 relative drop-shadow-2xl translate-y-6" fill="currentColor" viewBox="0 0 200 240">
+<path d="M100 25 C75 25 55 45 55 70 C55 90 68 107 85 113 C55 125 35 155 30 195 L170 195 C165 155 145 125 115 113 C132 107 145 90 145 70 C145 45 125 25 100 25 Z" fill="#1e222b"></path>
+<!-- Stylized Sunglasses / Glasses -->
+<rect fill="#0057FF" height="15" opacity="0.9" rx="3" width="25" x="70" y="60"></rect>
+<rect fill="#0057FF" height="15" opacity="0.9" rx="3" width="25" x="105" y="60"></rect>
+<line stroke="#0057FF" stroke-width="2" x1="95" x2="105" y1="67" y2="67"></line>
+<!-- Overlaid Dark Crewneck & Watch Accent -->
+<path d="M30 195 C35 155 55 125 85 113 L115 113 C145 125 165 155 170 195 Z" fill="#0c0d10"></path>
+<!-- Wristwatch on crossed arm pose -->
+<circle cx="95" cy="180" fill="#3B82F6" r="8" stroke="#fff" stroke-width="2"></circle>
+</svg>
+</div>
+<!-- Content Badge over subject -->
+<div class="relative z-10 space-y-1">
+<span class="inline-block px-2.5 py-0.5 rounded bg-cobalt text-white font-mono text-[10px] tracking-wider font-bold">
+                  DEVELOPER &amp; COMPOSITOR
+                </span>
+<h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Muhammad Nadhif Al-Fatih</h3>
+<p class="text-xs text-zinc-400 font-mono">Informatics Engineering • Institut Teknologi PLN</p>
+</div>
+</div>
+<!-- Bottom Meta Strip inside main avatar card -->
+<div class="bg-black/90 p-3 border-t border-zinc-800 flex justify-between items-center text-[10px] font-mono text-zinc-400">
+<span class="flex items-center gap-1.5 text-emerald-400">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                ACTIVE WORKSPACE
+              </span>
+<span>ID: MNAF_2026</span>
+</div>
+</div>
+<!-- 3. Floating Software Tile Left: Adobe After Effects (Ae) with script note & arrow -->
+<div class="absolute -left-2 sm:left-4 md:left-8 top-16 sm:top-20 z-20 animate-float">
+<div class="flex flex-col items-center">
+<span class="font-script text-base sm:text-xl text-ink font-bold -rotate-12 mb-1 flex items-center gap-1">
+                Visual Effects <span class="text-cobalt">✦</span>
+</span>
+<!-- Curved indicator SVG -->
+<svg class="w-6 h-6 text-ink/70 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M7 3C11 7 14 13 12 21M12 21L8 17M12 21L16 18"></path>
+</svg>
+<!-- Software Tile -->
+<div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#00005B] border-2 border-[#9999FF] shadow-brutal flex flex-col items-center justify-center p-2 text-center group cursor-pointer transition-transform hover:scale-105">
+<span class="font-bold text-2xl sm:text-3xl text-[#9999FF] tracking-tighter leading-none">Ae</span>
+<span class="text-[9px] font-mono font-bold text-white/80 mt-1 uppercase">Motion</span>
+</div>
+</div>
+</div>
+<!-- 4. Floating Software Tile: Premiere Pro (Pr) with script note -->
+<div class="absolute left-4 sm:left-12 bottom-36 sm:bottom-48 z-20 animate-float-alt">
+<div class="flex flex-col items-center">
+<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#00002A] border-2 border-[#EA77FF] shadow-brutal flex flex-col items-center justify-center p-2 text-center group cursor-pointer transition-transform hover:scale-105">
+<span class="font-bold text-xl sm:text-2xl text-[#EA77FF] tracking-tighter leading-none">Pr</span>
+<span class="text-[8px] font-mono font-bold text-white/80 mt-0.5 uppercase">Video</span>
+</div>
+<span class="font-script text-sm sm:text-base text-ink font-bold rotate-6 mt-1">Editing &amp; Audio</span>
+</div>
+</div>
+<!-- 5. Floating HTML5 / C++ Code Badge Left-Bottom -->
+<div class="absolute -left-3 sm:left-2 bottom-12 z-20 hidden md:block">
+<div class="w-14 h-14 rounded-2xl bg-[#0F1115] border-2 border-cobalt shadow-brutal flex flex-col items-center justify-center text-center">
+<span class="font-mono font-bold text-base text-cobalt leading-none">&lt;/&gt;</span>
+<span class="text-[8px] font-mono font-bold text-zinc-300 mt-1">HTML5/C++</span>
+</div>
+</div>
+<!-- 6. Floating Status Pill Badge (Top Right of collage) -->
+<div class="absolute right-0 sm:right-10 top-10 sm:top-12 z-20">
+<div class="bg-cobalt text-white px-3 sm:px-4 py-1.5 rounded-full font-mono text-[10px] sm:text-xs font-bold shadow-brutal tracking-wider flex items-center space-x-2 -rotate-3 hover:rotate-0 transition-transform cursor-default">
+<span class="text-amber-300">★</span>
+<span>GOLD MEDALIST • IIIEX 2025</span>
+</div>
+</div>
+<!-- 7. Floating 3D Vector Cursor Arrow Polygon -->
+<div class="absolute right-12 sm:right-28 top-28 sm:top-36 z-20 pointer-events-none hidden sm:block animate-bounce">
+<svg class="w-8 h-8 text-ink filter drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
+<path d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z" stroke="white" stroke-width="1.5"></path>
+</svg>
+<span class="text-[9px] font-mono bg-ink text-white px-1.5 py-0.5 rounded shadow ml-4 -mt-2 inline-block">nadhif.select()</span>
+</div>
+<!-- 8. Right Software Dock (Vertical 48px Toolbar directly like IMAGE_2) -->
+<div class="absolute right-0 sm:right-2 md:-right-6 top-32 z-20 hidden sm:flex flex-col items-center bg-panel-dark/95 border border-zinc-700/80 rounded-2xl p-2 shadow-2xl backdrop-blur-sm space-y-3.5 w-12" data-purpose="software-toolbar">
+<button class="w-8 h-8 rounded-lg bg-zinc-800/80 flex items-center justify-center text-zinc-300 hover:text-cobalt hover:bg-zinc-700 transition-colors" title="Select Tool">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4 2l16 8-8 2-2 8z"></path></svg>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-400 hover:text-cobalt hover:bg-zinc-800 transition-colors" title="Pen Tool (Vector)">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><circle cx="11" cy="11" r="2"></circle></svg>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-400 hover:text-cobalt hover:bg-zinc-800 transition-colors" title="Slice / Crop Tool">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6.13 1L6 16a2 2 0 0 0 2 2h15"></path><path d="M1 6.13L16 6a2 2 0 0 1 2 2v15"></path></svg>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-400 hover:text-cobalt hover:bg-zinc-800 transition-colors" title="Brush / Paint Tool">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18.375 2.625a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4Z"></path><path d="M9.5 13.5l1 1"></path></svg>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-cobalt bg-zinc-800/90 shadow-sm" title="Source Code Editor">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-400 hover:text-cobalt hover:bg-zinc-800 transition-colors" title="Text Type Tool">
+<span class="font-serif font-bold text-sm">T</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-400 hover:text-cobalt hover:bg-zinc-800 transition-colors" title="Hand / Pan Tool">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path><path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path><path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path></svg>
+</button>
+<div class="w-6 h-[1px] bg-zinc-700/80 my-1"></div>
+<!-- Color Palette Swatch Box -->
+<div class="relative w-6 h-6">
+<div class="w-4 h-4 bg-cobalt border border-white absolute top-0 left-0 z-10"></div>
+<div class="w-4 h-4 bg-ink border border-zinc-600 absolute bottom-0 right-0"></div>
+</div>
+</div>
+<!-- 9. Bottom-Right Terminal Window (CTRL + CREATE Manifesto like IMAGE_2) -->
+<div class="absolute -right-2 sm:right-2 md:right-4 -bottom-6 sm:bottom-2 z-20 w-[240px] sm:w-[290px] md:w-[330px] rounded-2xl bg-panel-dark border-2 border-zinc-700 shadow-2xl p-4 text-white font-sans" data-purpose="manifesto-card">
+<!-- Terminal Header -->
+<div class="flex items-center justify-between border-b border-zinc-800 pb-2.5 mb-3">
+<div class="flex items-center space-x-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+</div>
+<span class="font-mono text-[10px] tracking-wider font-bold text-cobalt bg-cobalt/10 px-2 py-0.5 rounded border border-cobalt/30">
+                CTRL + CREATE
+              </span>
+</div>
+<!-- Terminal Text Content -->
+<div class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-sans">
+              "Engineering logic meets visual storytelling. You don't need a degree to design the future. Just curiosity, consistency &amp; the courage to keep creating."
+            </div>
+<!-- Terminal Code Accent Lines -->
+<div class="mt-4 pt-3 border-t border-zinc-800/80 font-mono text-[11px] space-y-1">
+<div class="text-cobalt font-bold">» Keep Building.</div>
+<div class="text-sky-400">» Keep Designing.</div>
+<div class="text-zinc-500">» Keep Innovating.</div>
+</div>
+</div>
+<!-- 10. Bottom-Left Interactive Workspace Layers Window -->
+<div class="absolute -left-2 sm:left-2 md:-left-8 -bottom-10 sm:-bottom-4 z-30 w-[250px] sm:w-[300px] rounded-2xl bg-panel-dark/95 border-2 border-zinc-700 shadow-2xl p-3.5 text-white backdrop-blur-md" id="workspace-layers-panel">
+<div class="flex items-center justify-between pb-2 border-b border-zinc-800 text-[10px] font-mono text-zinc-400">
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-cobalt"></span>
+<span class="font-bold text-zinc-200">WORKSPACE_LAYERS</span>
+</div>
+<span class="text-[9px] bg-zinc-800 px-1.5 py-0.5 rounded">5 MODES</span>
+</div>
+<p class="text-[10px] text-zinc-400 my-2 font-mono">Click a focus mode layer to toggle active theme:</p>
+<!-- Interactive Layer Rows -->
+<div class="space-y-1.5 text-xs font-mono" id="layer-list-container">
+<button class="layer-item w-full flex items-center justify-between p-1.5 rounded bg-zinc-800/90 border border-cobalt text-left text-white transition-all group" data-accent="#0057FF" data-label="Web Architecture">
+<span class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-cobalt"></span>
+<span class="truncate">01 // Web &amp; HTML System</span>
+</span>
+<span class="text-[10px] text-cobalt group-hover:scale-110 transition-transform">👁</span>
+</button>
+<button class="layer-item w-full flex items-center justify-between p-1.5 rounded bg-zinc-900/60 border border-transparent text-left text-zinc-400 hover:text-white hover:bg-zinc-800/60 transition-all group" data-accent="#2563EB" data-label="Artificial Intelligence">
+<span class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-blue-600"></span>
+<span class="truncate">02 // Artificial Intelligence</span>
+</span>
+<span class="text-[10px] text-zinc-500 group-hover:scale-110 transition-transform">👁</span>
+</button>
+<button class="layer-item w-full flex items-center justify-between p-1.5 rounded bg-zinc-900/60 border border-transparent text-left text-zinc-400 hover:text-white hover:bg-zinc-800/60 transition-all group" data-accent="#0284C7" data-label="Competitive Programming">
+<span class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-sky-500"></span>
+<span class="truncate">03 // C++ &amp; Problem Solving</span>
+</span>
+<span class="text-[10px] text-zinc-500 group-hover:scale-110 transition-transform">👁</span>
+</button>
+<button class="layer-item w-full flex items-center justify-between p-1.5 rounded bg-zinc-900/60 border border-transparent text-left text-zinc-400 hover:text-white hover:bg-zinc-800/60 transition-all group" data-accent="#7C3AED" data-label="VFX &amp; Multimedia">
+<span class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-purple-500"></span>
+<span class="truncate">04 // VFX, Ae &amp; 3D Elements</span>
+</span>
+<span class="text-[10px] text-zinc-500 group-hover:scale-110 transition-transform">👁</span>
+</button>
+<button class="layer-item w-full flex items-center justify-between p-1.5 rounded bg-zinc-900/60 border border-transparent text-left text-zinc-400 hover:text-white hover:bg-zinc-800/60 transition-all group" data-accent="#059669" data-label="Neuro-Tech Innovation">
+<span class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="truncate">05 // Neuro-Tech Innovation</span>
+</span>
+<span class="text-[10px] text-zinc-500 group-hover:scale-110 transition-transform">👁</span>
+</button>
+</div>
+</div>
+<!-- 11. Bottom Vector Pen Tool Badge (Like IMAGE_2 bottom-left) -->
+<div class="absolute left-6 sm:left-24 bottom-32 sm:bottom-24 z-10 hidden lg:block">
+<div class="border border-ink/40 bg-white/95 p-2 rounded-lg shadow-sm flex items-center space-x-2">
+<div class="w-7 h-7 bg-ink text-white rounded flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+</div>
+<div class="leading-tight text-[10px] font-mono">
+<span class="text-ink/60 block">LOGIC IS THINKING</span>
+<span class="font-bold text-cobalt">MADE INTERACTIVE.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Bottom Status Strip (Identical in rhythm to IMAGE_2 footer info strip) -->
+<div class="mt-14 pt-6 border-t-2 border-ink/10 grid grid-cols-1 md:grid-cols-4 gap-4 items-center font-mono text-xs">
+<!-- WhatsApp Contact Directly -->
+<div class="flex items-center space-x-2">
+<span class="text-ink/50 text-[10px]">DIRECT_CONTACT</span>
+<a class="font-bold text-ink hover:text-cobalt transition-colors flex items-center gap-1" href="https://wa.me/6282289480199" rel="noopener noreferrer" target="_blank">
+<span>+62 822-8948-0199</span>
+<span class="text-[10px]">↗</span>
+</a>
+</div>
+<!-- Academic Affiliation -->
+<div class="md:col-span-2 text-ink/80 text-[11px] leading-relaxed">
+            Informatics Engineering Undergraduate at <span class="font-bold text-ink">Institut Teknologi PLN</span> (Jakarta). Bridging computational thinking with cutting-edge visual craft.
+          </div>
+<!-- Studio / Brand Badge -->
+<div class="flex items-center justify-start md:justify-end space-x-2">
+<div class="w-6 h-6 rounded-md bg-cobalt flex items-center justify-center text-white font-bold text-xs">N</div>
+<div class="leading-none text-left">
+<span class="block font-bold text-ink text-[11px]">nadhif.alfatih</span>
+<span class="block text-[9px] text-ink/50">STUDIO PORTFOLIO '26</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroStage -->
+<!-- BEGIN: AboutAndEducationSection -->
+<section class="py-20 border-b border-ink/10 relative" data-purpose="about-section" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Tracker Tag -->
+<div class="flex items-center space-x-2 font-mono text-xs text-cobalt font-bold mb-3">
+<span>[ 01 // PROFILE_&amp;_ACADEMIC_TRACK ]</span>
+<span class="w-12 h-[1px] bg-cobalt"></span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Narrative Bio -->
+<div class="lg:col-span-7 space-y-6">
+<h2 class="font-display uppercase text-4xl sm:text-6xl text-ink tracking-tight leading-none">
+              ENGINEERING LOGIC. <br>
+<span class="text-cobalt font-script text-5xl sm:text-7xl lowercase -rotate-2 inline-block">dynamic</span> STORYTELLING.
+            </h2>
+<div class="space-y-4 text-zinc-700 text-sm sm:text-base leading-relaxed">
+<p class="">
+                Saya adalah mahasiswa <strong class="text-ink font-semibold">Teknik Informatika di Institut Teknologi PLN</strong> (Angkatan 2026), alumni berprestasi dari <strong class="text-ink font-semibold">MAN Insan Cendekia OKI</strong>. Minat dan keahlian saya berakar kuat pada persimpangan antara pemrograman sistem, rekayasa kecerdasan buatan (Artificial Intelligence), serta estetika visual tingkat lanjut melalui Motion Graphics &amp; Visual Effects (VFX).
+              </p>
+<p>
+                Dengan rekam jejak kemenangan penghargaan internasional, saya mengaplikasikan pendekatan analitis berbasis logika dan algoritma komputer untuk memecahkan problem nyata—mulai dari riset pencegahan penyakit degeneratif berbasis teknologi saraf hingga pembuatan antarmuka web interaktif yang modern dan terstruktur.
+              </p>
+</div>
+<!-- Quick Metrics Cards -->
+<div class="grid grid-cols-3 gap-3 pt-4 font-mono">
+<div class="p-3 bg-white border border-ink/15 rounded-xl shadow-sm">
+<span class="text-[10px] text-ink/50 block">STATUS</span>
+<span class="text-lg sm:text-xl font-bold text-cobalt block mt-0.5">IT-PLN</span>
+<span class="text-[9px] text-ink/70">Informatics Eng.</span>
+</div>
+<div class="p-3 bg-white border border-ink/15 rounded-xl shadow-sm">
+<span class="text-[10px] text-ink/50 block">ACHIEVEMENT</span>
+<span class="text-lg sm:text-xl font-bold text-amber-500 block mt-0.5">GOLD</span>
+<span class="text-[9px] text-ink/70">IIIEX 2025 Intl</span>
+</div>
+<div class="p-3 bg-white border border-ink/15 rounded-xl shadow-sm">
+<span class="text-[10px] text-ink/50 block">ORGANIZATION</span>
+<span class="text-lg sm:text-xl font-bold text-ink block mt-0.5">5+ ROLES</span>
+<span class="text-[9px] text-ink/70">Leadership Track</span>
+</div>
+</div>
+<!-- Download / Direct Info Bar -->
+<div class="flex flex-wrap gap-3 pt-2 font-mono text-xs">
+<div class="px-3 py-1.5 rounded-lg bg-white border border-ink/20 flex items-center space-x-2">
+<span class="text-cobalt font-bold">LOC:</span>
+<span>Palembang &amp; Jakarta, Indonesia</span>
+</div>
+<div class="px-3 py-1.5 rounded-lg bg-white border border-ink/20 flex items-center space-x-2">
+<span class="text-cobalt font-bold">LANG:</span>
+<span>Bahasa Indonesia (Native), English</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Education History Window -->
+<div class="lg:col-span-5">
+<div class="rounded-2xl bg-panel-dark border-2 border-zinc-700 shadow-brutal p-5 text-white font-mono" data-purpose="education-window">
+<!-- Window Bar -->
+<div class="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4">
+<div class="flex items-center space-x-2">
+<span class="w-3 h-3 rounded-full bg-rose-500"></span>
+<span class="w-3 h-3 rounded-full bg-amber-500"></span>
+<span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+<span class="text-xs text-zinc-400 font-bold ml-2">education_history.json</span>
+</div>
+<span class="text-[10px] text-cobalt bg-cobalt/20 px-2 py-0.5 rounded">AUTHENTICATED</span>
+</div>
+<!-- Education Timeline Nodes -->
+<div class="relative pl-6 space-y-6 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-zinc-800">
+<!-- Node 1: IT PLN -->
+<div class="relative">
+<span class="absolute -left-[22px] top-1.5 w-3.5 h-3.5 rounded-full bg-cobalt ring-4 ring-panel-dark"></span>
+<div class="text-xs text-cobalt font-bold">2026 — PRESENT</div>
+<h4 class="text-sm font-bold text-white mt-0.5">Institut Teknologi PLN (IT-PLN)</h4>
+<p class="text-xs text-zinc-400 mt-1 font-sans">S1 Teknik Informatika (Informatics Engineering). Fokus: Rekayasa Perangkat Lunak, Sistem Cerdas &amp; Algoritma Komputasi.</p>
+</div>
+<!-- Node 2: MAN Insan Cendekia OKI -->
+<div class="relative">
+<span class="absolute -left-[22px] top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-panel-dark"></span>
+<div class="text-xs text-emerald-400 font-bold">2023 — 2026</div>
+<h4 class="text-sm font-bold text-white mt-0.5">MAN Insan Cendekia OKI</h4>
+<p class="text-xs text-zinc-400 mt-1 font-sans">Madrasah Aliyah Negeri unggulan nasional. Aktif dalam riset sains teknologi, ekstrakurikuler ICT, dan kepemimpinan asrama.</p>
+</div>
+<!-- Node 3: MTsN 2 Kota Palembang -->
+<div class="relative">
+<span class="absolute -left-[22px] top-1.5 w-3.5 h-3.5 rounded-full bg-zinc-600 ring-4 ring-panel-dark"></span>
+<div class="text-xs text-zinc-400 font-bold">2020 — 2023</div>
+<h4 class="text-sm font-bold text-zinc-200 mt-0.5">MTsN 2 Kota Palembang</h4>
+<p class="text-xs text-zinc-400 mt-1 font-sans">Pendidikan Menengah Pertama. Pondasi logika sains, matematika terapan, dan minat awal teknologi digital.</p>
+</div>
+<!-- Node 4: SD IT Ma'had Izzatuna -->
+<div class="relative">
+<span class="absolute -left-[22px] top-1.5 w-3.5 h-3.5 rounded-full bg-zinc-700 ring-4 ring-panel-dark"></span>
+<div class="text-xs text-zinc-500 font-bold">2014 — 2020</div>
+<h4 class="text-sm font-bold text-zinc-300 mt-0.5">SD IT Ma'had Izzatuna</h4>
+<p class="text-xs text-zinc-400 mt-1 font-sans">Pendidikan Dasar Islam Terpadu. Pembentukan karakter, integritas kedisiplinan, dan dasar literasi bilingual.</p>
+</div>
+</div>
+<!-- Terminal Command Footer -->
+<div class="mt-6 pt-3 border-t border-zinc-800 text-[10px] text-zinc-400 flex items-center justify-between">
+<span>$ verify_credentials --all</span>
+<span class="text-emerald-400">STATUS: VALIDATED [OK]</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutAndEducationSection -->
+<!-- BEGIN: FlagshipProjectSection -->
+<section class="py-20 bg-ink text-white relative overflow-hidden" data-purpose="flagship-neuro-dawn" id="neuro-dawn">
+<!-- Circuit Grid Overlay -->
+<div class="absolute inset-0 bg-dark-grid opacity-20 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Header Tag -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 border-b border-zinc-800 pb-6 gap-4">
+<div>
+<div class="flex items-center space-x-2 font-mono text-xs text-cobalt font-bold mb-2">
+<span>[ 02 // FEATURED_RESEARCH_&amp;_AWARD ]</span>
+<span class="w-12 h-[1px] bg-cobalt"></span>
+</div>
+<h2 class="font-display uppercase text-5xl sm:text-7xl tracking-tight text-white">
+              NEURO DAWN
+            </h2>
+<p class="text-zinc-400 font-mono text-xs sm:text-sm mt-1">
+              Parkinson's Disease Prevention Technology • Biomedical Invention
+            </p>
+</div>
+<div class="font-script text-2xl sm:text-3xl text-amber-400 rotate-2">
+            International Gold Medalist ✦
+          </div>
+</div>
+<!-- Showcase Window -->
+<div class="rounded-3xl bg-panel-dark border-2 border-zinc-700 shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+<!-- Left Specs & Technical Description (7 Cols) -->
+<div class="lg:col-span-7 p-6 sm:p-8 md:p-10 space-y-6 border-b lg:border-b-0 lg:border-r border-zinc-800">
+<div class="flex items-center space-x-2 font-mono text-xs text-emerald-400">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span>PATENT PENDING // BIOMEDICAL EMBEDDED COMPUTING</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-bold font-sans tracking-tight text-white">
+              Inovasi Teknologi Pencegahan Dini Penyakit Parkinson Berbasis Neuro-Stimulasi
+            </h3>
+<p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
+<strong class="text-white">NEURO DAWN</strong> adalah proyek penelitian ilmiah dan rekayasa teknologi kesehatan yang dirancang untuk mencegah degradasi progresif neuron dopaminergik pada penderita tahap awal Parkinson. Sistem ini mengintegrasikan sensor telemetri sinyal biometrik dengan algoritma stimulasi listrik terkontrol secara presisi pada substantia nigra otak.
+            </p>
+<!-- Technical Highlights -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 font-mono text-xs">
+<div class="p-4 rounded-xl bg-black/50 border border-zinc-800 space-y-2">
+<span class="text-cobalt font-bold block text-sm">01 // TELEMETRY CORE</span>
+<p class="text-zinc-400 leading-normal font-sans">
+                  Monitoring fluktuasi bio-elektrik dan prediksi penurunan kadar dopamin dengan latensi rendah.
+                </p>
+</div>
+<div class="p-4 rounded-xl bg-black/50 border border-zinc-800 space-y-2">
+<span class="text-purple-400 font-bold block text-sm">02 // CONTROL SYSTEM</span>
+<p class="text-zinc-400 leading-normal font-sans">
+                  Protokol komputasi adaptif untuk pelepasan gelombang stimulasi mikro yang terstandarisasi aman bagi jaringan saraf.
+                </p>
+</div>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-[11px] border border-zinc-700">Biotechnology</span>
+<span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-[11px] border border-zinc-700">Embedded Computing</span>
+<span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-[11px] border border-zinc-700">Signal Processing</span>
+<span class="px-2.5 py-1 rounded bg-zinc-800 text-zinc-300 font-mono text-[11px] border border-zinc-700">Neuroscience</span>
+</div>
+</div>
+<!-- Right Award Podium Badge (5 Cols) -->
+<div class="lg:col-span-5 bg-gradient-to-br from-zinc-900 to-black p-6 sm:p-8 md:p-10 flex flex-col justify-between relative">
+<div class="space-y-4">
+<div class="inline-flex items-center space-x-2 bg-amber-400/10 border border-amber-400/30 text-amber-400 px-3 py-1 rounded-full font-mono text-xs font-bold">
+<span>🏆 OFFICIAL RECOGNITION</span>
+</div>
+<div class="space-y-1">
+<span class="font-display text-4xl sm:text-5xl text-amber-400 tracking-tight block">GOLD MEDAL</span>
+<span class="font-mono text-sm text-zinc-400 block">Medali Emas Tingkat Internasional</span>
+</div>
+<div class="p-4 rounded-xl bg-panel-dark border border-zinc-700 space-y-2 text-xs font-mono">
+<div class="text-zinc-400">EVENT:</div>
+<div class="text-white font-bold text-sm">Indonesia International Invention Expo (IIIEX) 2025</div>
+<div class="pt-2 text-zinc-400">CATEGORY:</div>
+<div class="text-cobalt font-bold">Biotechnology — International Level</div>
+<div class="pt-2 text-zinc-400">ORGANIZED BY:</div>
+<div class="text-zinc-200">Indonesian Young Scientist Association (IYSA) × UNNES</div>
+</div>
+</div>
+<!-- Team / Role Meta -->
+<div class="mt-8 pt-4 border-t border-zinc-800 flex items-center justify-between text-xs font-mono">
+<div class="text-zinc-400">
+                RESEARCH LEAD: <br>
+<span class="text-white font-bold">Muhammad Nadhif Al-Fatih</span>
+</div>
+<div class="text-right">
+<span class="inline-block px-3 py-1 rounded bg-cobalt text-white font-bold">CERTIFIED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FlagshipProjectSection -->
+<!-- BEGIN: SkillsSection -->
+<section class="py-20 border-b border-ink/10 relative" data-purpose="skills-and-software" id="skills">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<div class="flex items-center space-x-2 font-mono text-xs text-cobalt font-bold mb-2">
+<span>[ 03 // TECHNICAL_CAPABILITIES ]</span>
+<span class="w-12 h-[1px] bg-cobalt"></span>
+</div>
+<h2 class="font-display uppercase text-5xl sm:text-7xl text-ink tracking-tight">
+              SKILLS &amp; SOFTWARE Dock</h2>
+</div>
+<p class="font-mono text-xs sm:text-sm text-ink/70 mt-2 md:mt-0 max-w-md">
+            Komposisi keahlian multi-disiplin antara rekayasa perangkat lunak, logika algoritmik, serta produksi visual motion modern.
+          </p>
+</div>
+<!-- Interactive Software Squircle Dock (Matching IMAGE_2 aesthetic) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 mb-12">
+<!-- 1. HTML5 -->
+<div class="software-card p-4 rounded-2xl bg-white border-2 border-ink shadow-brutal flex flex-col items-center justify-center text-center transition-transform hover:-translate-y-1 cursor-default group">
+<div class="w-14 h-14 rounded-xl bg-orange-500/10 border border-orange-500 text-orange-600 flex items-center justify-center font-mono font-bold text-xl mb-2 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+              &lt;/&gt;
+            </div>
+<span class="font-bold text-sm text-ink block">HTML5 Semantic</span>
+<span class="font-mono text-[10px] text-ink/60">Modern Web Struct</span>
+</div>
+<!-- 2. C++ & Competitive Prog -->
+<div class="software-card p-4 rounded-2xl bg-white border-2 border-ink shadow-brutal flex flex-col items-center justify-center text-center transition-transform hover:-translate-y-1 cursor-default group">
+<div class="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-600 text-blue-600 flex items-center justify-center font-mono font-bold text-xl mb-2 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              C++
+            </div>
+<span class="font-bold text-sm text-ink block">Comp. Program</span>
+<span class="font-mono text-[10px] text-ink/60">Algorithms &amp; Logic</span>
+</div>
+<!-- 3. AI & Intelligent Systems -->
+<div class="software-card p-4 rounded-2xl bg-white border-2 border-ink shadow-brutal flex flex-col items-center justify-center text-center transition-transform hover:-translate-y-1 cursor-default group">
+<div class="w-14 h-14 rounded-xl bg-cobalt/10 border border-cobalt text-cobalt flex items-center justify-center font-mono font-bold text-xl mb-2 group-hover:bg-cobalt group-hover:text-white transition-colors">
+              AI
+            </div>
+<span class="font-bold text-sm text-ink block">Artificial Intell.</span>
+<span class="font-mono text-[10px] text-ink/60">Models &amp; Heuristics</span>
+</div>
+<!-- 4. After Effects -->
+<div class="software-card p-4 rounded-2xl bg-white border-2 border-ink shadow-brutal flex flex-col items-center justify-center text-center transition-transform hover:-translate-y-1 cursor-default group">
+<div class="w-14 h-14 rounded-xl bg-[#00005B] border border-[#9999FF] text-[#9999FF] flex items-center justify-center font-sans font-bold text-2xl mb-2 group-hover:scale-105 transition-transform">
+              Ae
+            </div>
+<span class="font-bold text-sm text-ink block">After Effects</span>
+<span class="font-mono text-[10px] text-ink/60">VFX &amp; Compositing</span>
+</div>
+<!-- 5. Premiere Pro -->
+<div class="software-card p-4 rounded-2xl bg-white border-2 border-ink shadow-brutal flex flex-col items-center justify-center text-center transition-transform hover:-translate-y-1 cursor-default group">
+<div class="w-14 h-14 rounded-xl bg-[#00002A] border border-[#EA77FF] text-[#EA77FF] flex items-center justify-center font-sans font-bold text-2xl mb-2 group-hover:scale-105 transition-transform">
+              Pr
+            </div>
+<span class="font-bold text-sm text-ink block">Premiere Pro</span>
+<span class="font-mono text-[10px] text-ink/60">Video Sequencing</span>
+</div>
+<!-- 6. CapCut / Rapid Content -->
+<div class="software-card p-4 rounded-2xl bg-white border-2 border-ink shadow-brutal flex flex-col items-center justify-center text-center transition-transform hover:-translate-y-1 cursor-default group">
+<div class="w-14 h-14 rounded-xl bg-zinc-900 border border-zinc-600 text-white flex items-center justify-center font-mono font-bold text-xl mb-2 group-hover:bg-zinc-800 transition-colors">
+              CC
+            </div>
+<span class="font-bold text-sm text-ink block">CapCut Video</span>
+<span class="font-mono text-[10px] text-ink/60">Social Narrative</span>
+</div>
+</div>
+<!-- 2-Column In-Depth Breakdown -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Left: Technical Hard Skills -->
+<div class="p-6 sm:p-8 rounded-2xl bg-white border-2 border-ink shadow-sm space-y-6">
+<h3 class="font-display uppercase text-2xl text-ink tracking-tight flex items-center gap-2">
+<span class="w-3 h-3 bg-cobalt"></span>
+              HARD SKILLS &amp; DOMAIN EXPERTISE
+            </h3>
+<div class="space-y-4 font-sans text-sm">
+<div class="border-b border-ink/10 pb-3">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-ink">Kerangka Web HTML &amp; Architecture</span>
+<span class="font-mono text-xs text-cobalt font-bold">PROFICIENT</span>
+</div>
+<p class="text-zinc-600 text-xs">Penulisan kode HTML semantik, aksesibilitas modern, integrasi stylesheet, dan layout responsif presisi.</p>
+</div>
+<div class="border-b border-ink/10 pb-3">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-ink">Competitive Programming &amp; Algoritma</span>
+<span class="font-mono text-xs text-cobalt font-bold">ADVANCED LOGIC</span>
+</div>
+<p class="text-zinc-600 text-xs">Pemecahan masalah matematis, optimasi kompleksitas waktu &amp; memori dengan bahasa C++.</p>
+</div>
+<div class="border-b border-ink/10 pb-3">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-ink">Multimedia Editing &amp; VFX Compositing</span>
+<span class="font-mono text-xs text-cobalt font-bold">PRODUCTION GRADE</span>
+</div>
+<p class="text-zinc-600 text-xs">Visual effect tracking, audio synchronization, motion graphics, color grading, dan storytelling video tingkat lanjut.</p>
+</div>
+<div class="">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-ink">Artificial Intelligence &amp; Biomedical Tech</span>
+<span class="font-mono text-xs text-cobalt font-bold">RESEARCH GRADE</span>
+</div>
+<p class="text-zinc-600 text-xs">Penerapan komputasi untuk biosinyal saraf dan otomasi analitik data kesehatan.</p>
+</div>
+</div>
+</div>
+<!-- Right: Soft Skills & Organizational Competencies -->
+<div class="p-6 sm:p-8 rounded-2xl bg-panel-dark text-white border-2 border-zinc-700 shadow-brutal space-y-6">
+<h3 class="font-display uppercase text-2xl tracking-tight flex items-center gap-2">
+<span class="w-3 h-3 bg-emerald-400"></span>
+              LEADERSHIP &amp; SOFT COMPETENCIES
+            </h3>
+<p class="text-zinc-300 text-xs sm:text-sm font-sans">
+              Diuji melalui berbagai kepanitiaan formal, penegakan kedisiplinan asrama, serta presentasi riset di hadapan dewan juri internasional.
+            </p>
+<div class="flex flex-wrap gap-2.5 font-mono text-xs">
+<span class="px-3.5 py-2 rounded-xl bg-zinc-800 border border-zinc-600 text-white flex items-center space-x-2">
+<span class="text-emerald-400">✦</span>
+<span>Kepemimpinan (Leadership)</span>
+</span>
+<span class="px-3.5 py-2 rounded-xl bg-zinc-800 border border-zinc-600 text-white flex items-center space-x-2">
+<span class="text-cobalt">✦</span>
+<span>Adaptabilitas Cepat</span>
+</span>
+<span class="px-3.5 py-2 rounded-xl bg-zinc-800 border border-zinc-600 text-white flex items-center space-x-2">
+<span class="text-purple-400">✦</span>
+<span class="">Komunikatif &amp; Negosiasi</span>
+</span>
+<span class="px-3.5 py-2 rounded-xl bg-zinc-800 border border-zinc-600 text-white flex items-center space-x-2">
+<span class="text-amber-400">✦</span>
+<span>Kerjasama Tim Solid</span>
+</span>
+<span class="px-3.5 py-2 rounded-xl bg-zinc-800 border border-zinc-600 text-white flex items-center space-x-2">
+<span class="text-rose-400">✦</span>
+<span class="">Bahasa Inggris (Komunikasi &amp; Teknis)</span>
+</span>
+</div>
+<!-- Soft Skill Metric Bars -->
+<div class="pt-4 border-t border-zinc-800 space-y-3 font-mono text-[11px]">
+<div class="">
+<div class="flex justify-between text-zinc-400 mb-1">
+<span>PROBLEM SOLVING &amp; LOGIC</span>
+<span class="text-cobalt">95%</span>
+</div>
+<div class="w-full bg-zinc-800 rounded-full h-1.5">
+<div class="bg-cobalt h-1.5 rounded-full w-[95%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-zinc-400 mb-1">
+<span>PUBLIC SPEAKING &amp; DEFENSE</span>
+<span class="text-emerald-400">90%</span>
+</div>
+<div class="w-full bg-zinc-800 rounded-full h-1.5">
+<div class="bg-emerald-400 h-1.5 rounded-full w-[90%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SkillsSection -->
+<!-- BEGIN: ExperienceTrackSection -->
+<section class="py-20 border-b border-ink/10 relative" data-purpose="experience-track" id="experience">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header -->
+<div class="flex items-center space-x-2 font-mono text-xs text-cobalt font-bold mb-2">
+<span>[ 04 // LEADERSHIP_&amp;_ORGANIZATION ]</span>
+<span class="w-12 h-[1px] bg-cobalt"></span>
+</div>
+<h2 class="font-display uppercase text-5xl sm:text-7xl text-ink tracking-tight mb-12">
+          ORGANIZATIONAL TRACK
+        </h2>
+<!-- Grid of Experience Cards (UI Window styled) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Re-Organisasi MAN IC OKI -->
+<div class="rounded-2xl bg-white border-2 border-ink shadow-brutal p-6 flex flex-col justify-between group hover:border-cobalt transition-colors">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-ink/60 mb-3">
+<span class="bg-ink/5 px-2 py-0.5 rounded font-bold text-cobalt">2025</span>
+<span>SELECTION_BOARD</span>
+</div>
+<h3 class="text-xl font-bold text-ink group-hover:text-cobalt transition-colors leading-snug">
+                Re-Organisasi MAN IC OKI
+              </h3>
+<div class="font-mono text-xs text-ink/70 font-semibold mt-1 mb-3">
+                Panitia Penguji / Wawancara Calon Anggota
+              </div>
+<p class="text-zinc-600 text-xs leading-relaxed font-sans">
+                Bertanggung jawab memimpin proses asesmen, uji integritas, dan wawancara terstruktur untuk menyaring suksesor kepengurusan organisasi siswa baru dengan standar kepemimpinan yang objektif.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-ink/10 font-mono text-[10px] text-ink/50">
+              ROLE_ID: REORG_ICOKI_25
+            </div>
+</div>
+<!-- Card 2: ICONIC 2025 -->
+<div class="rounded-2xl bg-white border-2 border-ink shadow-brutal p-6 flex flex-col justify-between group hover:border-cobalt transition-colors">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-ink/60 mb-3">
+<span class="bg-ink/5 px-2 py-0.5 rounded font-bold text-cobalt">2025</span>
+<span>EVENT_MANAGEMENT</span>
+</div>
+<h3 class="text-xl font-bold text-ink group-hover:text-cobalt transition-colors leading-snug">
+                ICONIC 2025
+              </h3>
+<div class="font-mono text-xs text-ink/70 font-semibold mt-1 mb-3">
+                Anggota Divisi Acara Seminar Nasional
+              </div>
+<p class="text-zinc-600 text-xs leading-relaxed font-sans">
+                Mengonsep rundown acara, mengoordinasikan narasumber tingkat nasional, serta menjaga alur operasional live event seminar nasional agar berjalan tepat waktu dan imersif.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-ink/10 font-mono text-[10px] text-ink/50">
+              ROLE_ID: ICONIC_SEMNAS_25
+            </div>
+</div>
+<!-- Card 3: Keasramaan Divisi Kesehatan -->
+<div class="rounded-2xl bg-white border-2 border-ink shadow-brutal p-6 flex flex-col justify-between group hover:border-cobalt transition-colors">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-ink/60 mb-3">
+<span class="bg-ink/5 px-2 py-0.5 rounded font-bold text-emerald-600">2024 — 2025</span>
+<span>HEALTH_OFFICER</span>
+</div>
+<h3 class="text-xl font-bold text-ink group-hover:text-cobalt transition-colors leading-snug">
+                Organisasi Keasramaan MAN IC OKI
+              </h3>
+<div class="font-mono text-xs text-ink/70 font-semibold mt-1 mb-3">
+                Divisi Kesehatan Asrama
+              </div>
+<p class="text-zinc-600 text-xs leading-relaxed font-sans">
+                Mengelola logistik medis asrama, tanggap darurat pertolongan pertama (P3K) bagi siswa asrama, serta mengedukasi standar sanitasi dan pola hidup sehat di lingkungan asrama.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-ink/10 font-mono text-[10px] text-ink/50">
+              ROLE_ID: HEALTH_BOARD_24
+            </div>
+</div>
+<!-- Card 4: Keasramaan Divisi Kedisiplinan -->
+<div class="rounded-2xl bg-white border-2 border-ink shadow-brutal p-6 flex flex-col justify-between group hover:border-cobalt transition-colors">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-ink/60 mb-3">
+<span class="bg-ink/5 px-2 py-0.5 rounded font-bold text-purple-600">2023 — 2024</span>
+<span>DISCIPLINE_CORE</span>
+</div>
+<h3 class="text-xl font-bold text-ink group-hover:text-cobalt transition-colors leading-snug">
+                Organisasi Keasramaan MAN IC OKI
+              </h3>
+<div class="font-mono text-xs text-ink/70 font-semibold mt-1 mb-3">
+                Divisi Kedisiplinan Siswa
+              </div>
+<p class="text-zinc-600 text-xs leading-relaxed font-sans">
+                Menegakkan tata tertib kehidupan asrama terpadu 24 jam, membangun kultur ketepatan waktu belajar mandiri dan ibadah, serta membina resolusi konflik antar siswa.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-ink/10 font-mono text-[10px] text-ink/50">
+              ROLE_ID: DISCIPLINE_BOARD_23
+            </div>
+</div>
+<!-- Card 5: Ekstrakurikuler ICT Programming & Editing -->
+<div class="rounded-2xl bg-white border-2 border-ink shadow-brutal p-6 flex flex-col justify-between group hover:border-cobalt transition-colors md:col-span-2 lg:col-span-2">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-ink/60 mb-3">
+<span class="bg-ink/5 px-2 py-0.5 rounded font-bold text-cobalt">2023 — 2024</span>
+<span>TECH_INCUBATOR</span>
+</div>
+<h3 class="text-xl font-bold text-ink group-hover:text-cobalt transition-colors leading-snug">
+                Ekstrakurikuler ICT (Information &amp; Communication Technology)
+              </h3>
+<div class="font-mono text-xs text-ink/70 font-semibold mt-1 mb-3">
+                Divisi Programming dan Editing Kreatif
+              </div>
+<p class="text-zinc-600 text-xs leading-relaxed font-sans">
+                Pusat penggodokan keterampilan coding dasar, pemecahan problem logika algoritmik, serta produksi konten video sekolah. Mengoordinasikan tutorial teknis antar anggota dalam pembuatan proyek multimedia dan persiapan kompetisi sains informatika.
+              </p>
+</div>
+<div class="mt-6 pt-3 border-t border-ink/10 flex items-center justify-between font-mono text-[10px] text-ink/50">
+<span>ROLE_ID: ICT_TECH_CORE_23</span>
+<span class="text-cobalt font-bold">MULTIMEDIA &amp; DEV PILLAR</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ExperienceTrackSection -->
+<!-- BEGIN: ConnectCTASection -->
+<section class="py-24 bg-ink text-white relative overflow-hidden" data-purpose="connect-footer" id="connect">
+<div class="absolute inset-0 bg-dark-grid opacity-30 pointer-events-none"></div>
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+<!-- Terminal Badge -->
+<div class="inline-flex items-center space-x-2 bg-zinc-800/80 border border-zinc-700 px-3.5 py-1.5 rounded-full font-mono text-xs mb-8">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+<span class="text-zinc-300">connect_session.sh — AVAILABLE FOR COLLABORATION</span>
+</div>
+<h2 class="font-display uppercase text-5xl sm:text-7xl md:text-8xl tracking-tight text-white leading-none">
+          LET'S BUILD SOMETHING <br>
+<span class="text-cobalt font-script text-6xl sm:text-8xl md:text-9xl lowercase inline-block -rotate-2">great</span> TOGETHER.
+        </h2>
+<p class="text-zinc-400 font-mono text-xs sm:text-base max-w-xl mx-auto mt-6 mb-10">
+          Tertarik mendiskusikan rekayasa sistem web, implementasi AI, proyek Visual Effects (Ae/Pr), atau kolaborasi riset teknologi? Jalur komunikasi saya selalu terbuka.
+        </p>
+<!-- Direct CTA Buttons -->
+<div class="flex flex-wrap justify-center items-center gap-4">
+<!-- WhatsApp Primary Button -->
+<a class="px-6 py-3.5 rounded-xl bg-cobalt hover:bg-blue-600 text-white font-mono text-sm font-bold shadow-brutal flex items-center space-x-2 transition-all transform hover:-translate-y-0.5" href="https://wa.me/6282289480199" rel="noopener noreferrer" target="_blank">
+<span>WHATSAPP: +62 822-8948-0199</span>
+<span>↗</span>
+</a>
+<!-- Email Direct Button -->
+<a class="px-6 py-3.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-mono text-sm border border-zinc-600 flex items-center space-x-2 transition-all" href="mailto:nadhif.alfatih2008@gmail.com">
+<span>EMAIL DIRECT</span>
+<span class="text-zinc-400">nadhif.alfatih2008@gmail.com</span>
+</a>
+</div>
+<!-- Location & Institution Detail -->
+<div class="mt-14 pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-zinc-500 gap-4">
+<div class="flex items-center space-x-2">
+<span>📍 Kota Palembang, Sumatera Selatan • Institut Teknologi PLN</span>
+</div>
+<div>
+            © 2026 MUHAMMAD NADHIF AL-FATIH. ALL RIGHTS RESERVED.
+          </div>
+<div class="flex items-center space-x-3 text-zinc-400">
+<span class="text-cobalt font-bold">HTML5</span>
+<span>•</span>
+<span class="text-purple-400 font-bold">VFX COMP</span>
+<span>•</span>
+<span class="text-emerald-400 font-bold">IIIEX GOLD</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ConnectCTASection -->
+</main>
+<!-- BEGIN: InteractiveScriptHandlers -->
+<script data-purpose="workspace-layers-interaction">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Interactive Layer switching in Hero section
+      const layerButtons = document.querySelectorAll('#layer-list-container .layer-item');
+      
+      layerButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          // Reset styles
+          layerButtons.forEach(btn => {
+            btn.classList.remove('bg-zinc-800/90', 'border-cobalt', 'text-white');
+            btn.classList.add('bg-zinc-900/60', 'border-transparent', 'text-zinc-400');
+          });
+
+          // Activate clicked
+          button.classList.remove('bg-zinc-900/60', 'border-transparent', 'text-zinc-400');
+          button.classList.add('bg-zinc-800/90', 'border-cobalt', 'text-white');
+
+          // Subtle visual feedback
+          const accentColor = button.getAttribute('data-accent');
+          const heroScript = document.querySelector('.font-script');
+          if (heroScript && accentColor) {
+            heroScript.style.color = accentColor;
+          }
+        });
+      });
+    });
+  </script>
+<!-- END: InteractiveScriptHandlers -->
+<span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span><span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span></body></html>
